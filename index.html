@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Hello Word</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Hello Word</h1>
+    <input 
+        type="button" 
+        value="Press to alert"
+        onclick="showmessage()"
+    >
+    <br><br> <!--เว้นบรรทัด-->
+
+    <label for="">กรอกข้อมูล เพื่อแสดงผลการแจ้งเตือน</label> <br>
+    <input 
+        type="text"
+        id="change-alert">
+
+    <br> <!--เว้นบรรทัด-->
+
+    <input 
+        type="button" 
+        value="แสดงการแจ้งเตือน"
+        onclick="changealert()"
+        >
+
+    <h1 id="headtext">[พิมพ์ข้อมูล]</h1>
+
+    <label for="">กรอกข้อมูล เพื่อเปลี่ยนข้อความ</label> <br>
+    <input 
+        type="text"
+        id="change-text">
+
+    <br> <!--เว้นบรรทัด-->
+
+    <input 
+        type="reset" 
+        value="เปลี่ยน"
+        onclick="changetext()"
+        >
+
+    <br>
+    <h1>โปรแกรมคำนวน การสอบผ่านรายวิชา การพัฒนาเว็บแอปพลิเคชัน</h1>
+    กรอกคะแนนกลางภาค : 
+    <input type="number" name="" id="midterm" placeholder="คะแนนกลางภาค" >
+    คะแนนเต็ม 30
+
+    <br>
+
+    กรอกคะแนนปลายภาค :
+    <input type="number" name="" id="final" placeholder="คะแนนปลายภาค">
+    คะแนนเต็ม 40
+
+    <br>
+    กรอกคะแนนจิตพิสัย : 
+    <input type="number" name="" id="nice" placeholder="คะแนนจิตพิสัย">
+    คะแนนเต็ม 30
+
+    <br>
+    <h2 id="total">คะแนนรวม : </h2>
+    <h2 id="grade">ผลการเรียน : </h2>
+
+    <input 
+        type="button" 
+        value="ตรวจสอบผลการเรียน"
+        onclick="checkgrade()"
+        >
+    
+</body>
+</html>
