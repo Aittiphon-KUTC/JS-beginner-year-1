@@ -10,6 +10,7 @@ function changealert() {
     // คำสั่งในการดึงข้อมูลจาก HTML โดยระบุ ID มาเป้นตัวดำเนินการ
     document.getElementById("change-alert").value=""
     //เครียข้อมูลออกจากฟอร์มที่กรอกเข้ามา
+    //โดยที่จะต้องอ้างอิงข้อมูลก่อน
     alert(msg)
 }
 
