@@ -1,4 +1,5 @@
 
+
 function showmessage(){
     console.log("Hello word") //แสดงผลลัทธ์ใน Console
     alert("Hello word") //แสดงการแจ้งเตือนข้อความ
@@ -25,24 +26,44 @@ function changetext() {
 }
 
 function checkgrade(){
-    let M = Number(document.getElementById("midterm").value)
-    let F = Number(document.getElementById("final").value)
-    let N = Number(document.getElementById("nice").value)
+   
+    let M = Number(document.getElementById("midterm").value);
+    let F = Number(document.getElementById("final").value);
+    let N = Number(document.getElementById("nice").value);
 
-    document.getElementById("midterm").value=""
-    document.getElementById("final").value=""
-    document.getElementById("nice").value=""
+    let T = document.getElementById("total");
+    let G = document.getElementById("grade");
+
+    // document.getElementById("midterm").value=""
+    // document.getElementById("final").value=""
+    // document.getElementById("nice").value=""
+
+    Swal.fire({
+        title: "กรุณากรอกข้อมูลให้ครบถ้วนก่อน",
+        text: "บางข้อมูลที่คุณยังไม่ได้กรอกอยู่",
+        icon: "warning",
+        showCancelButton: false,
+        showConfirmButton: false
+    });
 
     let total = M+F+N
 
-    let T = document.getElementById("total")
-    let G = document.getElementById("grade")
-    if(total >= 70){
-        T.innerHTML = "คะแนนรวม : " + total
-        G.innerHTML = "ผลการเรียน : " + "ผ่าน"
+    if (!M || !F || !N) {
+        alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+    } else if (M > 30 || F > 40 ||  N> 30 ) {
+        console.log("กรุณากรอกคะแนนให้ถูกต้อง");
     } else {
-        T.innerHTML = "คะแนนรวม : " + total
-        G.innerHTML = "ผลการเรียน : " + "ไม่ผ่าน"
+
+            if(total >= 70){
+                T.innerHTML = "คะแนนรวม : " + total;
+                G.innerHTML = "ผลการเรียน : " + "ผ่าน";
+            } else {
+                T.innerHTML = "คะแนนรวม : " + total;
+                G.innerHTML = "ผลการเรียน : " + "ไม่ผ่าน";
+                
+            }
+
+        }
     }
 
-}
+    
